@@ -77,7 +77,7 @@ resources:
 
 .PHONY: register-parachain
 register-parachain:
-	polkadot-js-api --seed "//Alice" --sudo tx.parasSudoWrapper.sudoScheduleParaInitialize 200 "{ \"genesisHead\":\"$(shell cat ./resources/para-200-genesis)\", \"validationCode\":\"$(shell cat ./resources/para-200.wasm)\", \"parachain\": true }"
+	polkadot-js-api --seed "//Alice" --sudo tx.parasSudoWrapper.sudoScheduleParaInitialize 2000 "{ \"genesisHead\":\"$(shell cat ./resources/para-2000-genesis)\", \"validationCode\":\"$(shell cat ./resources/para-2000.wasm)\", \"parachain\": true }"
 
 .PHONY: launch
 launch:
