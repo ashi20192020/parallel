@@ -41,9 +41,7 @@ pub fn development_config(id: ParaId) -> ChainSpec {
         ChainType::Development,
         move || {
             testnet_genesis(
-                "5HHMY7e8UAqR5ZaHGaQnRW5EDR8dP7QpAyjeBu6V7vdXxxbf"
-                    .parse()
-                    .unwrap(),
+                get_account_id_from_seed::<sr25519::Public>("Alice"),
                 vec![
                     get_authority_keys_from_seed("Alice"),
                     get_authority_keys_from_seed("Bob"),
@@ -186,12 +184,7 @@ fn testnet_genesis(
         tokens: TokensConfig {
             balances: endowed_accounts
                 .iter()
-                .flat_map(|x| {
-                    vec![
-                        (x.clone(), CurrencyId::KSM, 10_u128.pow(15)),
-                        (x.clone(), CurrencyId::USDT, 10_u128.pow(9)),
-                    ]
-                })
+                .flat_map(|x| vec![(x.clone(), CurrencyId::USDT, 10_u128.pow(9))])
                 .collect(),
         },
         loans: LoansConfig {

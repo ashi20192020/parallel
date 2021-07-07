@@ -300,7 +300,7 @@ pub mod pallet {
                 ),
                 amount,
                 // TODO : measure xcm weight
-                1000_1000,
+                100_000_000,
             )?;
 
             Self::deposit_event(Event::WithdrawSuccess(agent, amount));
