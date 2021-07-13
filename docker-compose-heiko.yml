@@ -2,9 +2,9 @@ version: '3'
 services:
     relay_alice:
         ports:
-            - '30333:30333'
-            - '9933:9933'
-            - '9944:9944'
+            - '31333:30333'
+            - '19933:9933'
+            - '19944:9944'
         image: mrpai/westend:0.9.6
         volumes:
             - './westend-custom.json:/usr/local/bin/westend-custom.json'
@@ -15,9 +15,9 @@ services:
 
     relay_bob:
         ports:
-            - '30344:30344'
-            - '9935:9935'
-            - '9945:9945'
+            - '31344:30344'
+            - '19935:9935'
+            - '19945:9945'
         image: mrpai/westend:0.9.6
         volumes:
             - './westend-custom.json:/usr/local/bin/westend-custom.json'
@@ -30,9 +30,9 @@ services:
 
     para_alice:
         ports:
-            - '30345:30345'
-            - '9936:9936'
-            - '9946:9946'
+            - '31345:30345'
+            - '19936:9936'
+            - '19946:9946'
         image: mrpai/heiko:0.9.7
         volumes:
             - './westend-custom.json:/usr/local/bin/westend-custom.json'
@@ -45,9 +45,9 @@ services:
 
     para_bob:
         ports:
-            - '30346:30346'
-            - '9937:9937'
-            - '9947:9947'
+            - '31346:30346'
+            - '19937:9937'
+            - '19947:9947'
         image: mrpai/heiko:0.9.7
         volumes:
             - './westend-custom.json:/usr/local/bin/westend-custom.json'
@@ -60,9 +60,9 @@ services:
 
     para_charlie:
         ports:
-            - '30347:30347'
-            - '9938:9938'
-            - '9948:9948'
+            - '31347:30347'
+            - '19938:9938'
+            - '19948:9948'
         image: mrpai/heiko:0.9.7
         volumes:
             - './westend-custom.json:/usr/local/bin/westend-custom.json'
